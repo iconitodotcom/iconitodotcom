@@ -3,3 +3,6 @@
 #python cahce files
 /__pychache/
 *.pyc
+
+#Mac junk
+.DS_Store
