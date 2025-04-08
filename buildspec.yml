@@ -1,39 +1,13 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.10
-    commands:
-      - echo Installing Poetry...
-      # - curl -sSL https://install.python-poetry.org | python3 -
-      # - export PATH="$HOME/.local/bin:$PATH"
-      # - echo Installing dependencies using Poetry...
-      # - poetry config virtualenvs.create false  # install in system env (for CodeBuild)
-      # - poetry install --no-interaction --no-ansi
-
   pre_build:
     commands:
-      - echo Running lint checks...
-      #- poetry run flake8 . || true  # Optional: ignores failure for now
-
-  build:
-    commands:
-      - echo Build started on `date`
-      - echo Running tests...
-      #- poetry run pytest  # or use your preferred test runner
-
-  post_build:
-    commands:
-      - echo Build completed on `date`
-
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: no
-  base-directory: .
-
-# cache:
-#   paths:
-#     - '/root/.cache/pip/**/*'
-#     - '/root/.cache/pypoetry/**/*'
+      - echo ${DOCKERHUB_TOKEN} | docker login -u ${DOCKERHUB_USER} --password-stdin
+    build:
+      commands:
+        - docker -build -t iconitodev:latest .
+    post_build:
+      commands:
+        - docker tag iconitodev:latest ${DOCKERHUB_USER}/iconitodev:latest
+        - docker push ${DOCKERHUB_USER}/iconitodev:latest
