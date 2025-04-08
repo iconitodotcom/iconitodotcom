@@ -4,10 +4,10 @@ phases:
   pre_build:
     commands:
       - echo ${DOCKERHUB_TOKEN} | docker login -u ${DOCKERHUB_USER} --password-stdin
-    build:
-      commands:
-        - docker build -t iconitodev:latest .
-    post_build:
-      commands:
-        - docker tag iconitodev:latest ${DOCKERHUB_USER}/iconitodev:latest
-        - docker push ${DOCKERHUB_USER}/iconitodev:latest
+  build:
+    commands:
+      - docker build -t iconitodev:latest .
+  post_build:
+    commands:
+      - docker tag iconitodev:latest ${DOCKERHUB_USER}/iconitodev:latest
+      - docker push ${DOCKERHUB_USER}/iconitodev:latest
