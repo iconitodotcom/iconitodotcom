@@ -13,9 +13,9 @@ pipeline {
                 sh '''
                     echo "#### Verify Dockerfile exist in the proyect repository ####"
                     ls -l Dockerfile
-                    echo "#### Verify docker is installed in agent ###
+                    echo "#### Verify docker is installed in agent ###"
                     docker --version
-                    echo "#### Login to docker hub ###
+                    echo "#### Login to docker hub ###"
                     echo $DOCKERHUB_USER | docker login -u $DOCKERHUB_TOKEN --password-stdin
                 '''
             }
