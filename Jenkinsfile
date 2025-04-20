@@ -16,6 +16,7 @@ pipeline {
                     echo "#### Verify docker is installed in agent ###"
                     docker --version
                     echo "#### Login to docker hub ###"
+                    echo $DOCKERHUB_USER $DOCKERHUB_TOKEN
                     echo $DOCKERHUB_USER | docker login -u $DOCKERHUB_TOKEN --password-stdin
                 '''
             }
