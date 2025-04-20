@@ -5,7 +5,6 @@ pipeline {
     {
         DOCKERHUB_USER = credentials('dockerhub_user')
         DOCKERHUB_TOKEN = credentials('dockerhub_token')
-        IMAGE_NAME = "iconitodev"
         VERSION = "JI${env.BUILD_NUMBER}"
     }
 
@@ -24,14 +23,16 @@ pipeline {
         }
         stage('BUILD') {
             steps {
-                sh 'docker build -t $IMAGE_NAME:$VERSION .'
+                sh '''
+                    docker build -t iconitodev:$VERSION .
+                '''
             }
         }
         stage('POST_BUILD') {
             steps {
                 sh '''
-                    docker tag $IMAGE_NAME:$VERSION $DOCKERHUB_USER/$IMAGE_NAME:$VERSION
-                    docker push $DOCKERHUB_USER/$IMAGE_NAME:$VERSION
+                    docker tag iconitodev:$VERSION $DOCKERHUB_USER/iconitodev:$VERSION
+                    docker push $DOCKERHUB_USER/iconitodev:$VERSION
                 '''
             }
         }
