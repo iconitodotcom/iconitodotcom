@@ -5,7 +5,9 @@ pipeline {
     {
         DOCKERHUB_USER = credentials('dockerhub_user')
         DOCKERHUB_TOKEN = credentials('dockerhub_token')
+        FLY_API_TOKEN = credentials('fly_api_token')
         VERSION = "JI${env.BUILD_NUMBER}"
+        FLY_APP = 'iconitodev-website'
     }
 
     stages {
@@ -18,6 +20,9 @@ pipeline {
                     docker --version
                     echo "#### Login to docker hub ###"
                     echo $DOCKERHUB_TOKEN | docker login -u $DOCKERHUB_USER --password-stdin
+                    echo "#### Login to Fly ####"
+                    export FLY_API_TOKEN=${FLY_API_TOKEN}
+                    ~/.fly/bin/fly auth token ${FLY_API_TOKEN}
                 '''
             }
         }
@@ -34,6 +39,13 @@ pipeline {
                     docker tag iconitodev:$VERSION $DOCKERHUB_USER/iconitodev:$VERSION
                     docker push $DOCKERHUB_USER/iconitodev:$VERSION
                 '''
+            }
+        }
+        stage('DEPLOY') {
+            steps {
+            sh '''
+              fly deploy --image $DOCKERHUB_USER/iconitodev:$VERSION --app ${FLY_APP} --remote-only
+            '''
             }
         }
     }
