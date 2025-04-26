@@ -19,7 +19,9 @@ RUN poetry config virtualenvs.create false && poetry install --no-interaction --
 COPY . .
 
 #Expose Flask port
-EXPOSE 5000
+#EXPOSE 5000
+#Fly port
+EXPOSE 8080
 
 # Set environment variables
 ENV FLASK_APP=app.py

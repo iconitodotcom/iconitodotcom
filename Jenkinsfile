@@ -36,15 +36,15 @@ pipeline {
         stage('POST_BUILD') {
             steps {
                 sh '''
-                    docker tag iconitodev:$VERSION $DOCKERHUB_USER/iconitodev:$VERSION
-                    docker push $DOCKERHUB_USER/iconitodev:$VERSION
+                    docker tag iconitodev:$VERSION iconitodev/iconitodev:$VERSION
+                    docker push iconitodev/iconitodev:$VERSION
                 '''
             }
         }
         stage('DEPLOY') {
             steps {
             sh '''
-              fly deploy --image $DOCKERHUB_USER/iconitodev:$VERSION --app $FLY_APP --remote-only
+              fly deploy --image iconitodev/iconitodev:$VERSION --app $FLY_APP --remote-only
             '''
             }
         }
