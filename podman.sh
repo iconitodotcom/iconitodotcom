@@ -16,4 +16,6 @@ podman build -t iconitodev .
 
 # Run the container image in localhost
 # http://localhost:8080
-podman run -d -p 8080:5000 --name iconito-app iconitodev
+#podman run -d -p 8080:5000 --name iconito-app iconitodev
+podman run -d -p 8080:8080 --name iconito-app iconitodev
+#podman run -it -p 8080:8080 --name iconito-app iconitodev
