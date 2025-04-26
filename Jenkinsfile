@@ -21,8 +21,8 @@ pipeline {
                     echo "#### Login to docker hub ###"
                     echo $DOCKERHUB_TOKEN | docker login -u $DOCKERHUB_USER --password-stdin
                     echo "#### Login to Fly ####"
-                    export FLY_API_TOKEN=${FLY_API_TOKEN}
-                    ~/.fly/bin/fly auth token ${FLY_API_TOKEN}
+                    export FLY_API_TOKEN=$FLY_API_TOKEN
+                    fly auth token $FLY_API_TOKEN
                 '''
             }
         }
@@ -44,7 +44,7 @@ pipeline {
         stage('DEPLOY') {
             steps {
             sh '''
-              fly deploy --image $DOCKERHUB_USER/iconitodev:$VERSION --app ${FLY_APP} --remote-only
+              fly deploy --image $DOCKERHUB_USER/iconitodev:$VERSION --app $FLY_APP --remote-only
             '''
             }
         }
