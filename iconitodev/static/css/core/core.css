@@ -1,0 +1,106 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f0f;
+    /* color: #00ffcc; */
+    color : #3b4a4e;
+  }
+  nav{
+      background: linear-gradient(to right, #000000, #1a1a1a);
+  }
+  .hero {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+  }
+  .retro-nav-border 
+  {
+      border-bottom: 2px dashed #00ffff;
+      box-shadow: 0 0 5px #00ffff;
+  }
+  .retro-border {
+    border: 2px dashed #00ffff;
+    box-shadow: 0 0 5px #00ffff;
+    padding: 3%;
+  }
+  .retro-solid-border {
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 5px #00ffff;
+    padding: 3%;
+  }
+  .retro-line {
+      border: none;
+      border-top: 2px dashed #00ffff;
+      width: 100%; 
+      box-shadow: 0 0 5px #00ffff;
+      opacity: 1;
+  }
+  .primary-txt-color {
+      color: #00ffcc !important;
+  }
+  .secondary-txt-color {
+      color: #96ABB0 !important;
+  }
+  .brand-ff {
+    font-family: 'Press Start 2P', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem !important;
+  }
+  h1, h2, h3, h5 {
+    font-family: 'Press Start 2P', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #96ABB0
+  }
+  .btn-retro {
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    transition: background-color 0.3s ease;
+    animation: beat 1.2s infinite;
+  }
+  .btn-retro:hover {
+    background-color: #00ffcc;
+    color: #000;
+  }
+  footer {
+    background-color: #111;
+    border-top: 2px dashed #00ffcc;
+    color: #00ffcc;
+    padding: 20px 0;
+    text-align: center;
+  }
+  input, select {
+    background-color: #000;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+  }
+  label {
+    color: #00ffcc;
+  }
+  #pagetitle {
+    /* font-family: 'Courier New', Courier, monospace !important; */
+    color: #00ffcc !important;
+  }
+  #aboutimg {
+    border: 4px double #00ffff;
+    box-shadow: 0 0 5px #00ffff;
+    padding: 2%;
+  }
+  .code-box {
+    padding: 20px;
+    overflow-y: auto;
+    white-space: pre-line;
+    min-height: 400px;
+    opacity: .25
+  }
+  #typed-code {
+    /*color: #00ffcc !important;*/
+  }
+
+  @keyframes beat {
+    0%, 100% {
+      box-shadow: 0 0 0 rgba(0, 255, 255, 0);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+  }

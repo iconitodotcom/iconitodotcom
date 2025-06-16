@@ -13,79 +13,114 @@
 -->
 {% extends "base.html" %}
 {% block content %}
+
     <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <h1 class="display-4">Iconito<span class="fw-lighter">Dev</span></h1>
-      <p class="lead">Retro-Futuristic Code Solutions for a Digital Tomorrow</p>
-      <a href="#portfolio" class="btn btn-retro btn-lg mt-3">Explore Our Code</a>
-    </div>
-  </section>
+    <section id="hero" class="hero">
+        <div class="container retro-border">
+            <div class="row" style="height: 86vh;">
+                <div class="col text-start align-self-center">
+                    <h1>Have fun and make dreams come true!</h1>
+                    <p class="lead secondary-txt-color">Technology and innovation is not all about number and math, It is also fun!</p>
+                    <hr class="retro-line">
+                    <a href="#portfolio" class="btn btn-retro btn-lg mt-3">Portfolio</a>
+                </div>
+                <div class="col align-self-end">
+                    <div class="code-box mx-auto text-start">
+                        <span id="typed-code" class="primary-txt-color"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-5">
+    <!-- About Section -->
+    <section id="about" class="py-5">
     <div class="container retro-border">
-      <h2>About Us</h2>
-      <p>DevStartup is a collective of digital engineers inspired by the tech dreams of the 70s and 80s. We craft efficient, futuristic software solutions with a retro soul.</p>
+        <div class="row gx-5" style="height: 81vh;">
+            <div class="col">
+                <div class="row"></div> 
+                <div class="row">
+                    <div class="col align-self-center text-center">
+                        <img src="{{ url_for('static', filename='img/JulioTech.jpeg') }}" alt="" id="aboutimg" style="width: 60%; height:80%;">
+                    </div>
+                </div>
+                <div class="row retro-border mt-3 w-80">
+                    <div class="code-box mx-auto text-start">
+                        <span id="description-code" class="primary-txt-color"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col align-self-centerh-100">
+                <h2 id="aboutme">Julio Conchas</h2>
+                <hr class="retro-line">
+                <p class="secondary-txt-color">
+                    Hi all this is Julio.<br>
+                    With more than 7 years of experience. I'm currently working for IBM Mexico as Backed Developer.
+                    I'm mainly focured on Java development but I'm also fond of python, AI project and Mobile Development.
+                </p>
+                <p class="secondary-txt-color">
+                    <span class="fw-bold">Iconito</span>Dev is currently my place of peace where I can have fun building what makes me happy 
+                    whether if it's useful or not just for the joy of learn and have a great time doing what I like.
+                </p>
+            </div>
+        </div>
     </div>
-  </section>
+    </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-5">
-    <div class="container retro-border">
-      <h2>Portfolio</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="p-3 border border-success">
-            <h5>Project Neon Grid</h5>
-            <p>A web terminal for decentralized communications, styled in classic CRT green.</p>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 hero">
+        <div class="container retro-border" >
+          <h2>Portfolio</h2>
+          <div class="row" style="height: 76vh;">
+            <div class="col-md-6 mb-4">
+              <div class="p-3 retro-solid-border">
+                <h5>IconitoDev</h5>
+                <p class="secondary-txt-color">Personal website which include information about me and a portfolio with details about my proyects...</p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="p-3 retro-solid-border">
+                <h5>Ticitl</h5>
+                <p class="secondary-txt-color">Virtual clinic. the platform includes a website to sell subscriptions and the platform itself, dashboard, user management and more...</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="p-3 border border-success">
-            <h5>Project Synthwave</h5>
-            <p>Mobile code editor with vintage sounds and pixel transitions.</p>
+    </section>
+
+    <!-- Login Section -->
+    <section id="contact" class="py-5">
+        <div class="container retro-border" style="height: 76vh;">
+          <h2>Contact</h2>
+          <p class="secondary-txt-color">Want to know more about me or <span class="fw-bold">Iconito</span>Dev send a message let's get it touch.</p>
+          <form action="/login" method="POST" class="w-50 mx-auto">
+            <div class="mb-3">
+              <label for="username" class="form-label">Name</label>
+              <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">email</label>
+              <input type="email" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">Message</label><br>
+              <textarea name="" id="" cols="58" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-retro">Send</button>
+          </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+          <p class="mb-1">&copy; 2025 IconitoDev. Have fun and make dreams come true!.</p>
+          <div>
+            <a href="#hero" class="me-3">Home</a>
+            <a href="#about" class="me-3">About</a>
+            <a href="#portfolio" class="me-3">Portfolio</a>
+            <a href="#login">Login</a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Login Section -->
-  <section id="login" class="py-5">
-    <div class="container retro-border">
-      <h2>Dev Login Console</h2>
-      <form action="/login" method="POST" class="w-50 mx-auto">
-        <div class="mb-3">
-          <label for="username" class="form-label">Username</label>
-          <input type="text" id="username" name="username" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" id="password" name="password" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label for="role" class="form-label">Role</label>
-          <select id="role" name="role" class="form-select">
-            <option value="developer">Developer</option>
-            <option value="admin">Admin</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-retro">Access Console</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer>
-    <div class="container">
-      <p class="mb-1">&copy; 2025 DevStartup. Hack the future, retro-style.</p>
-      <div>
-        <a href="#hero" class="me-3">Home</a>
-        <a href="#about" class="me-3">About</a>
-        <a href="#portfolio" class="me-3">Portfolio</a>
-        <a href="#login">Login</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 {% endblock %}
