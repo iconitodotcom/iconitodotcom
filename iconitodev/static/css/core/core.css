@@ -89,8 +89,8 @@ body {
     padding: 20px;
     overflow-y: auto;
     white-space: pre-line;
-    min-height: 400px;
-    opacity: .25
+   /* min-height: 400px; */
+    opacity: .25;
   }
   #typed-code {
     /*color: #00ffcc !important;*/
@@ -104,3 +104,30 @@ body {
       box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
     }
   }
+
+    @media (min-width: 992px) {
+        #hero-container
+        {
+            height: 56rem;
+        }
+    }
+    @media (min-width: 1200px) {
+        #hero-container
+        {
+            height: 55rem;
+        }
+    }
+    @media (min-width: 1400px) {
+        #hero-container
+        {
+            height: 54rem;
+        }
+    }
+    @media (min-width: 1700px) {
+        #hero-container
+        {
+            height: 53rem;
+        }
+    }
+
+  
