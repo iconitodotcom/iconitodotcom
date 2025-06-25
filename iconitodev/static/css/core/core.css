@@ -108,25 +108,25 @@ body {
     @media (min-width: 992px) {
         #hero-container
         {
-            height: 56rem;
+            height: 50rem;
         }
     }
     @media (min-width: 1200px) {
         #hero-container
         {
-            height: 55rem;
+            height: 49rem;
         }
     }
     @media (min-width: 1400px) {
         #hero-container
         {
-            height: 54rem;
+            height: 48rem;
         }
     }
     @media (min-width: 1700px) {
         #hero-container
         {
-            height: 53rem;
+            height: 47rem;
         }
     }
 
