@@ -34,23 +34,36 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" style="padding-top: 4rem">
     <div class="container retro-border">
-        <div class="row gx-5" style="height: 81vh;">
+        <div class="row d-inline-block d-lg-flex" id="about-container">
+            <div class="col align-self-centerh-100 d-block d-lg-none mb-5">
+                <h2 id="aboutme">Julio Conchas</h2>
+                <hr class="retro-line">
+                <p class="secondary-txt-color">
+                    Hi all this is Julio.<br>
+                    With more than 7 years of experience. I'm currently working for IBM Mexico as Backed Developer.
+                    I'm mainly focured on Java development but I'm also fond of python, AI project and Mobile Development.
+                </p>
+                <p class="secondary-txt-color">
+                    <span class="fw-bold">Iconito</span>Dev is currently my place of peace where I can have fun building what makes me happy 
+                    whether if it's useful or not just for the joy of learn and have a great time doing what I like.
+                </p>
+            </div>
             <div class="col">
                 <div class="row"></div> 
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col align-self-center text-center">
                         <img src="{{ url_for('static', filename='img/JulioTech.jpeg') }}" alt="" id="aboutimg" style="width: 60%; height:80%;">
                     </div>
-                </div>
-                <div class="row retro-border mt-3 w-80">
+                </div> 
+                <div class="row retro-border mt-3" style="min-height: 20rem;">
                     <div class="code-box mx-auto text-start">
                         <span id="description-code" class="primary-txt-color"></span>
                     </div>
                 </div>
             </div>
-            <div class="col align-self-centerh-100">
+            <div class="col align-self-centerh-100 d-none d-lg-block">
                 <h2 id="aboutme">Julio Conchas</h2>
                 <hr class="retro-line">
                 <p class="secondary-txt-color">
@@ -68,7 +81,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5 hero">
+    <section id="portfolio" style="padding-top: 4rem">
         <div class="container retro-border" >
           <h2>Portfolio</h2>
           <div class="row" style="height: 76vh;">
@@ -89,7 +102,7 @@
     </section>
 
     <!-- Contact Section start -->
-    <section id="contact" class="py-5">
+    <section id="contact"  style="padding-top: 4rem">
         <div class="container retro-border" style="height: 76vh;">
           <h2>Contact</h2>
           <p class="secondary-txt-color">Want to know more about me or <span class="fw-bold">Iconito</span>Dev send a message let's get it touch.</p>
