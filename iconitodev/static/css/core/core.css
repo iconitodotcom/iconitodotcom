@@ -36,7 +36,8 @@ body {
       color: #00ffcc !important;
   }
   .secondary-txt-color {
-      color: #96ABB0 !important;
+    /* color: #96ABB0 !important; */
+    color : #d8dedf !important;
   }
   .brand-ff {
     font-family: 'Press Start 2P', system-ui;
@@ -48,7 +49,8 @@ body {
     font-family: 'Press Start 2P', system-ui;
     font-weight: 400;
     font-style: normal;
-    color: #96ABB0
+    /* color: #96ABB0 */
+    color : #d8dedf
   }
   .btn-retro {
     background-color: transparent;
