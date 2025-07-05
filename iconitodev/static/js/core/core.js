@@ -28,6 +28,16 @@ new Typed('#description-code', {
     fadeOut: true,
     loop: true
 });
+new Typed('#description-code-mobile', {
+    strings: [
+      "<b>Subject Description:</b>\n&nbsp;<b>Age:</b> 33\n&nbsp;<b>Gender:</b> Male\n&nbsp;<b>Occupation:</b> Software Engineer\n&nbsp;<b>Height:</b> 1.72\n&nbsp;<b>Skin Tone:</b> Brown\n&nbsp;<b>Known Alias:</b> \"Gostbit\"",
+      "<b>Caution:</b>\n&nbsp;The subject is considered highly intelligent, fluent in multiple programming languages,\n&nbsp;With an extensive background in computer science and neural networks.\n&nbsp;Over a decade of experience working at IBM, and an early student research tenure at Intel, the subject’s technical background is deep",
+    ],
+    typeSpeed: 40,
+    backSpeed: 0,
+    fadeOut: true,
+    loop: true
+});
 new Typed('#aboutme', {
     strings: [
       "Julio Conchas"

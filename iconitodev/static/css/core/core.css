@@ -39,6 +39,10 @@ body {
     /* color: #96ABB0 !important; */
     color : #d8dedf !important;
   }
+  .text-justify
+  {
+    text-align: justify;
+  }
   .brand-ff {
     font-family: 'Press Start 2P', system-ui;
     font-weight: 400;
