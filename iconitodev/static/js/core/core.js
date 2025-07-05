@@ -1,6 +1,6 @@
 new Typed('#typed-code', {
     strings: [
-      "&lt;div class=\"col text-start\"&gt;\n&nbsp;&lt;h1&gt;Have fun and make dreams come true!&lt;/h1&gt;\n&nbsp;&lt;p class=\"lead\"&gt;Technology and innovation is not all about number and math, It is also fun!&lt;/p&gt;\n&nbsp;&lt;hr class=\"retro-line\"&gt;\n&nbsp;&lt;a href=\"#portfolio\" class=\"btn btn-retro btn-lg mt-3\"&gt;Portfolio&lt;/a&gt;\n&lt;/div&gt;",
+      "&lt;div class=\"col text-start\"&gt;\n&nbsp;&lt;h1&gt;Have fun while making dreams come true!&lt;/h1&gt;\n&nbsp;&lt;p class=\"lead\"&gt;Technology and innovation is not all about number and math, It is also fun!&lt;/p&gt;\n&nbsp;&lt;hr class=\"retro-line\"&gt;\n&nbsp;&lt;a href=\"#portfolio\" class=\"btn btn-retro btn-lg mt-3\"&gt;Portfolio&lt;/a&gt;\n&lt;/div&gt;",
       ".retro-line {\n&nbsp;border:none;\n&nbsp;border-top: 2px dashed #00ffff;\n&nbsp;width:100%;\n&nbsp;margin:2rem 0;\n&nbsp;box-shadow:0 0 5px #00ffff;\n&nbsp;opacity: 1;\n}\n.code-box {\n&nbsp;padding: 20px;\n&nbsp;overflow-y: auto;\n&nbsp;white-space: preline;\n}\n#typed-code {\n&nbsp;color: #00ffcc !important;\n}"
     ],
     typeSpeed: 40,
@@ -10,7 +10,7 @@ new Typed('#typed-code', {
   });
 new Typed('#typed-code-mobile', {
     strings: [
-      "&lt;div class=\"col text-start\"&gt;\n&nbsp;&lt;h1&gt;Have fun and make dreams come true!&lt;/h1&gt;\n&nbsp;&lt;p class=\"lead\"&gt;Technology and innovation is not all about number and math, It is also fun!&lt;/p&gt;\n&nbsp;&lt;hr class=\"retro-line\"&gt;\n&nbsp;&lt;a href=\"#portfolio\" class=\"btn btn-retro btn-lg mt-3\"&gt;Portfolio&lt;/a&gt;\n&lt;/div&gt;",
+      "&lt;div class=\"col text-start\"&gt;\n&nbsp;&lt;h1&gt;Have fun while making dreams come true!&lt;/h1&gt;\n&nbsp;&lt;p class=\"lead\"&gt;Technology and innovation is not all about number and math, It is also fun!&lt;/p&gt;\n&nbsp;&lt;hr class=\"retro-line\"&gt;\n&nbsp;&lt;a href=\"#portfolio\" class=\"btn btn-retro btn-lg mt-3\"&gt;Portfolio&lt;/a&gt;\n&lt;/div&gt;",
       ".retro-line {\n&nbsp;border:none;\n&nbsp;border-top: 2px dashed #00ffff;\n&nbsp;width:100%;\n&nbsp;margin:2rem 0;\n&nbsp;box-shadow:0 0 5px #00ffff;\n&nbsp;opacity: 1;\n}\n.code-box {\n&nbsp;padding: 20px;\n&nbsp;overflow-y: auto;\n&nbsp;white-space: preline;\n}\n#typed-code {\n&nbsp;color: #00ffcc !important;\n}"
     ],
     typeSpeed: 40,

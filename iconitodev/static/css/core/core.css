@@ -114,19 +114,19 @@ body {
   @media (min-width: 992px) {
     #hero-container, #about-container, #portfolio-container, #contact-container
     {
-        height: 50rem;
+        height: 80vh;
     }
 }
 @media (min-width: 1200px) {
     #hero-container, #about-container, #portfolio-container, #contact-container
     {
-        height: 49rem;
+        height: 80vh;
     }
 }
 @media (min-width: 1400px) {
     #hero-container, #about-container, #portfolio-container, #contact-container
     {
-        height: 48rem;
+        height: 80vh;
     }
 }
 @media (min-width: 1700px) {
