@@ -98,9 +98,19 @@ body {
    /* min-height: 400px; */
     opacity: .25;
   }
+  .container-height
+  {
+    height: 80vh;
+  }
+  .card-style
+  {
+    width: 20rem;
+    background-color: #0f0f0f
+  }
   #typed-code {
     /*color: #00ffcc !important;*/
   }
+
 
   @keyframes beat {
     0%, 100% {
