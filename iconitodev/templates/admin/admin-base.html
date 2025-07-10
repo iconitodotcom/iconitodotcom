@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="d-flex" style="min-height: 100vh;">
+
+        {% include "admin/adminnav.html" %}
+
+        <!-- Main Content Area -->
+        <div class="flex-grow-1 d-flex flex-column" style="max-width: 86%;">
+            <!-- Top Navbar -->
+            <div class="row page-title">
+                <div class="col-9">
+                    {% block title %}{% endblock %}
+                </div>
+                <div class="col">
+                    <a href="#" class="primary-txt-color">
+                        <i class="bi bi-person-circle fs-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="flex-grow-1 p-4">
+                <div class="container-fluid">
+                    {% block admin_content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

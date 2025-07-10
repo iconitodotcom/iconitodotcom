@@ -10,18 +10,19 @@
     <!-- Login Section start -->
     <section id="contact" class="mb-5" style="padding-top: 4rem">
         <div class="container retro-border container-height d-flex justify-content-center align-items-center">
-          <form action="/login" method="POST" class="w-50 m-auto">
-            <p class="secondary-txt-color">Login to access <span class="fw-bold">Iconito</span>.io admin pannel.</p>
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input type="text" id="username" name="username" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">password</label>
-              <input type="password" id="password" name="password" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-retro">Login</button>
-          </form>
+            <form method="POST" class="w-50 m-auto">
+                {{ form.hidden_tag() }}
+                <p class="secondary-txt-color">Login to access <span class="fw-bold">Iconito</span>.io admin pannel.</p>
+                <div class="mb-3">
+                    {{ form.user.label(class="form-label", for="username") }}
+                    {{ form.user(class="form-control", id="username", required=True) }}
+                </div>
+                <div class="mb-3">
+                    {{ form.pwd.label(class="form-label", for="password") }}
+                    {{ form.pwd(class="form-control", id="password", required=True) }}
+                </div>
+                <button type="submit" class="btn btn-retro">Login</button>
+            </form>
         </div>
     </section>
     <!-- Login Section end -->
