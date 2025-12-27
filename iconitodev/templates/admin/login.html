@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top retro-nav-border">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/" id="pagetitle">Iconito<span class="fw-lighter ">.io</span></a>
+        </div>
+    </nav>
+    <!-- Login Section start -->
+    <section id="contact" class="mb-5" style="padding-top: 4rem">
+        <div class="container retro-border container-height d-flex justify-content-center align-items-center">
+            <form method="POST" class="w-50 m-auto">
+                {{ form.hidden_tag() }}
+                <p class="secondary-txt-color">Login to access <span class="fw-bold">Iconito</span>.io admin pannel.</p>
+                <div class="mb-3">
+                    {{ form.user.label(class="form-label", for="username") }}
+                    {{ form.user(class="form-control", id="username", required=True) }}
+                </div>
+                <div class="mb-3">
+                    {{ form.pwd.label(class="form-label", for="password") }}
+                    {{ form.pwd(class="form-control", id="password", required=True) }}
+                </div>
+                <button type="submit" class="btn btn-retro">Login</button>
+            </form>
+        </div>
+    </section>
+    <!-- Login Section end -->
+
+    <!-- Footer Section start -->
+    <footer>
+        <div class="container">
+          <p class="mb-1">&copy; 2025 Iconito.io Have fun and make dreams come true!.</p>
+        </div>
+    </footer>
+    <!-- Footer Section end -->
+{% endblock %}
