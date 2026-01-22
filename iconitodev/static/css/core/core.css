@@ -110,6 +110,10 @@ body {
   #typed-code {
     /*color: #00ffcc !important;*/
   }
+  a:hover
+  {
+    opacity: 0.5;
+  }
 
 
   @keyframes beat {
