@@ -4,7 +4,7 @@ body {
     /* color: #00ffcc; */
     color : #3b4a4e;
   }
-  nav{
+  #siteNav{
       background: linear-gradient(to right, #000000, #1a1a1a);
   }
   .hero {
@@ -105,7 +105,8 @@ body {
   .card-style
   {
     width: 20rem;
-    background-color: #0f0f0f
+    background-color: #0f0f0f;
+    border-radius: 10px; 
   }
   #typed-code {
     /*color: #00ffcc !important;*/
