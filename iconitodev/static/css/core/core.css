@@ -114,6 +114,10 @@ body {
   {
     opacity: 0.5;
   }
+  .card-mh
+  {
+    max-height: 40vh !important;
+  }
 
 
   @keyframes beat {
