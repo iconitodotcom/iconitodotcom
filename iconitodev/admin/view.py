@@ -2,9 +2,11 @@
 #issue  dev           date       description
 # na    Julio Conchas 07/08/2025 first creation
 # na    Julio Conchas 12/27/2025 add Login View
+# 12    Julio Conchas 01/25/2026 add connection to db, modify login to get auth from db
 
 from flask import render_template,request,Blueprint,redirect,url_for
 from iconitodev.admin.forms import LoginForm
+from iconitodev.admin.db import login_user, RESPONSE_SUCCESS
 
 admin = Blueprint('admin',__name__)
 
@@ -20,10 +22,11 @@ def login():
     if request.method == 'POST':
         print(f'form data = {form.data}')
         # DB call here 
-        if form.data['user'] == 'jconchas' and form.data['pwd'] == 'pedos':
-            # redirect to admin
+        auth = login_user(email=form.data['email'],password=form.data['pwd'])
+        #print(f'Aauth = {auth}')
+        if auth[RESPONSE_SUCCESS]:
             return redirect(url_for('admin.dashboard'))
         else:
-            print("Not the right credentials")
+            render_template('admin/login.html',error="Auth error")
 
     return render_template('admin/login.html',form=form)
