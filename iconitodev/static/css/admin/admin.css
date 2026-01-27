@@ -6,3 +6,16 @@
 {
     background-color: #111928 !important;
 }
+.logoborder
+{
+    font-size: 1.25rem;
+    min-width: 18vh;
+    min-height: 16vh;
+}
+.logo-retro {
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    transition: background-color 0.3s ease;
+    animation: beat 1.2s infinite;
+  }
