@@ -87,9 +87,9 @@ body {
     color: #00ffcc !important;
   }
   #aboutimg {
-    border: 4px double #00ffff;
+    /* border: 4px double #00ffff;
     box-shadow: 0 0 5px #00ffff;
-    padding: 2%;
+    padding: 2%; */
   }
   .code-box {
     /* padding: 20px; */
@@ -117,7 +117,7 @@ body {
   }
   .card-mh
   {
-    max-height: 40vh !important;
+    max-height: 45vh !important;
   }
 
 

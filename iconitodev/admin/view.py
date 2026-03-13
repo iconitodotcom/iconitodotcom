@@ -27,9 +27,10 @@ def login():
         # DB call here 
         auth = login_user(email=form.data['email'],password=form.data['pwd'])
         print(f'Aauth = {auth}')
+        print(f'Aauth = {auth[RESPONSE_USER].id}')
         if auth[RESPONSE_SUCCESS]:
-            session["user_id"] = auth.user.id
-            session["role"] = DB_ADMIN_ROLE if is_admin(auth.user.id) else DB_USER_ROLE
+            session["user_id"] = auth[RESPONSE_USER].id
+            session["role"] = DB_ADMIN_ROLE if is_admin(auth[RESPONSE_USER].id) else DB_USER_ROLE
             return redirect(url_for('admin.dashboard'))
         else:
             render_template('admin/login.html',error="Auth error")
