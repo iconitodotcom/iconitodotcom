@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% include "topnav.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="error-code">{{ error_code | default('404') }}</div>
+    <div class="error-divider"></div>
+    <h1 class="error-title">{{ error_title | default('Page Not Found') }}</h1>
+    <p class="error-message">
+        {{ error_message | default("The page you're looking for doesn't exist or has been moved.") }}
+    </p>
+    <a href="{{ url_for('core.index') }}" class="btn btn-retro btn-lg mt-3">Back to Home</a>
+</div>
+{% endblock %}
