@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Login Section start -->
+    <section id="contact" class="mb-5" style="padding-top: 4rem">
+        <div class="container retro-border container-height d-flex justify-content-center align-items-center">
+            <form method="POST" class="w-50 m-auto">
+                {{ form.hidden_tag() }}
+                <div class="w-100 text-center d-flex justify-content-center">
+                    <div class="w-25 logo-retro rounded-circle logoborder py-5">
+                        <p id="pagetitle" class="fw-bold m-0 py-2">Iconito<span class="fw-lighter">.io</span></p>
+                    </div>
+                </div>
+                <div class="p-4"></div>
+                <div class="mb-3">
+                    {{ form.email.label(class="form-label", for="email") }}
+                    {{ form.email(class="form-control", id="email",placeholder="name@company.com") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.password.label(class="form-label", for="password") }}
+                    {{ form.password(class="form-control", id="password") }}
+                </div>
+                {{ form.submit(class="btn btn-retro") }}
+            </form>
+        </div>
+    </section>
+    <!-- Login Section end -->
+
+    <!-- Footer Section start -->
+    <footer>
+        <div class="container">
+          <p class="mb-1">&copy; 2026 Innovation That Brings Ideas to Life.</p>
+        </div>
+    </footer>
+    <!-- Footer Section end -->
+{% endblock %}
