@@ -7,36 +7,24 @@
 {% block admin_content %}
     <div class="row" style="height: 85vh;">
 
-      <!-- Ticitl Summary Card -->
+      <!-- Users Summary Card -->
       <div class="col d-flex justify-content-center">
-           <a href="" class="text-decoration-none hover-effect">
+           <a href="{{ url_for('users.adminusers') }}" class="text-decoration-none hover-effect">
                 <div class="card retro-solid-border card-style">
                   <div class="card-body text-center d-flex justify-content-center flex-column">
-                    <h5 class="card-title primary-txt-color mb-3"><i class="bi bi-file-earmark-ppt fs-1"></i></h5>
-                    <h5 class="card-subtitle mb-2">Ticitl</h5>
-                    <p class="card-text small">Ticitl is a virtual clinic project in progress.</p>
+                    <h5 class="card-title primary-txt-color mb-3"><i class="bi bi-people fs-1"></i></h5>
+                    <h5 class="card-subtitle mb-2">Users</h5>
+                    <p class="card-text small">Manage iconito.io users, create, register, update & delete.</p>
                   </div>
                 </div>
             </a>
       </div>
-     <!-- MerkTrends Summary Card -->
+      <!-- Portfolio Summary Card -->
       <div class="col d-flex justify-content-center">
            <a href="" class="text-decoration-none hover-effect">
                 <div class="card retro-solid-border card-style">
                   <div class="card-body text-center d-flex justify-content-center flex-column">
-                    <h5 class="card-title primary-txt-color mb-3"><i class="bi bi-file-earmark-ppt fs-1"></i></h5>
-                    <h5 class="card-subtitle mb-2">MerkTrends</h5>
-                    <p class="card-text small">Project to see trendy products in Mercadolibre.</p>
-                  </div>
-                </div>
-            </a>
-      </div>
-      <!-- Archelogy Summary Card -->
-      <div class="col d-flex justify-content-center">
-           <a href="" class="text-decoration-none hover-effect">
-                <div class="card retro-solid-border card-style">
-                  <div class="card-body text-center d-flex justify-content-center flex-column">
-                    <h5 class="card-title primary-txt-color mb-3"><i class="bi bi-file-earmark-ppt fs-1"></i></h5>
+                    <h5 class="card-title primary-txt-color mb-3"><i class="bi bi-journal-code fs-1"></i></h5>
                     <h5 class="card-subtitle mb-2">Portfolio</h5>
                     <p class="card-text small">Admin portfolio project, add new one an update.</p>
                   </div>

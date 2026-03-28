@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav id="siteNav" class="navbar navbar-expand-lg navbar-light bg-white fixed-top retro-nav-border">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#" id="pagetitle">Iconito<span class="fw-lighter ">.io</span></a>
+    <a class="navbar-brand fw-bold" href="{{ url_for('core.index') }}" id="pagetitle">Iconito<span class="fw-lighter ">.io</span></a>
     <button class="navbar-toggler btn-retro" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,6 +12,7 @@
         <li class="nav-item"><a class="nav-link primary-txt-color" href="#team">Team</a></li>
         <li class="nav-item"><a class="nav-link primary-txt-color" href="#portfolio">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link primary-txt-color" href="#contact">Contact</a></li>
+        <!-- website version button code block start
         <li class="nav-item">
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -31,6 +32,7 @@
               </ul>
             </div>
         </li>
+        website version button code block end -->
         <li class="nav-item"><a class="btn btn-retro ms-2 d-none d-lg-block" href="{{ url_for('admin.login') }}">Login</a></li>
       </ul>
     </div>

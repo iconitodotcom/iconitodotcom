@@ -17,8 +17,7 @@ admin = Blueprint('admin',__name__)
 def dashboard():
     return render_template('admin/dashboard.html')
 
-
-@admin.route('/login',methods=['GET','POST'])
+@admin.route('/loginold',methods=['GET','POST'])
 def login():
     form = LoginForm()
 

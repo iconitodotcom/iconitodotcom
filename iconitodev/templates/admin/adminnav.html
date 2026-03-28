@@ -1,9 +1,10 @@
-<nav class="d-flex flex-column bg-admin-nav text-white p-3" style="width: 15rem">
+<nav class="d-flex flex-column bg-admin-nav text-white p-3" style="max-width: 15rem">
     <a href="#" class="align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <a class="navbar-brand fw-bold" href="/" id="pagetitle">Iconito<span class="fw-lighter ">.io</span></a>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
+    <!--
          <li class="nav-item">
             <a href="" class="nav-link text-white">
                 <i class="bi bi-file-earmark-ppt"></i>
@@ -22,7 +23,7 @@
                 <span class="d-none d-lg-inline ms-2">Arche.</span>
             </a>
         </li>
-     <!--   <li>
+        <li>
             <a href="#" class="nav-link text-white">
                 <i class="bi bi-cash-stack"></i>
                 <span class="d-none d-lg-inline ms-2">Finanzas</span>
@@ -42,16 +43,30 @@
             </a>
         </li> -->
         <li>
+            <a href="{{ url_for('admin.dashboard') }}" class="nav-link text-white">
+                <i class="bi bi-speedometer"></i>
+                <span class="d-none d-xl-inline ms-2">Dashboard</span>
+                <span class="d-none ms-2">Dashboard details</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('users.adminusers') }}" class="nav-link text-white">
+                <i class="bi bi-people"></i>
+                <span class="d-none d-xl-inline ms-2">Users</span>
+                <span class="d-none ms-2">Users details</span>
+            </a>
+        </li>
+        <li>
             <a href="#" class="nav-link text-white">
-                <i class="bi bi-gear"></i>
-                <span class="d-none d-xl-inline ms-2">Portfolio.</span>
+                <i class="bi bi-journal-code"></i>
+                <span class="d-none d-xl-inline ms-2">Portfolio</span>
                 <span class="d-none ms-2">Portfolio details</span>
             </a>
         </li>
         <li>
             <a href="#" class="nav-link text-white">
                 <i class="bi bi-gear"></i>
-                <span class="d-none d-xl-inline ms-2">Config.</span>
+                <span class="d-none d-xl-inline ms-2">Config</span>
                 <span class="d-none ms-2">Configuración</span>
             </a>
         </li>

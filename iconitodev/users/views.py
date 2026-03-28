@@ -10,6 +10,11 @@ from iconitodev.users.forms import RegistrationForm, LoginForm, UpdateProfileFor
 
 users = Blueprint('users',__name__)
 
+#manageusers
+@users.route("/adminusers")
+def adminusers():
+    return render_template('admin/users.html')
+
 #register
 @users.route("/register", methods=['GET','POST'])
 def register():

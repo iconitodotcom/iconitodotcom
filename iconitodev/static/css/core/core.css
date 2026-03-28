@@ -108,6 +108,15 @@ body {
     background-color: #0f0f0f;
     border-radius: 10px; 
   }
+  .bg-card
+  {
+    background-color: #0f0f0f;
+  }
+  .table-card-style
+  {
+    background-color: #0f0f0f;
+    border-radius: 10px; 
+  }
   #typed-code {
     /*color: #00ffcc !important;*/
   }

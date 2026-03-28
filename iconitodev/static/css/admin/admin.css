@@ -1,6 +1,6 @@
 .bg-admin
 {
-    background-color: #030711;
+    /* background-color: #f0f0f0 !important;  */
 }
 .bg-admin-nav
 {
@@ -11,6 +11,10 @@
     font-size: 1.25rem;
     min-width: 18vh;
     min-height: 16vh;
+}
+.page-title
+{
+    color: #111928 !important;
 }
 .logo-retro {
     background-color: transparent;
