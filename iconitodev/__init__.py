@@ -24,7 +24,7 @@ app.jinja_env.auto_reload = True
 ########################
 #### DATABASE SETUP ####
 ########################
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = "test for now" #2os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
