@@ -6,6 +6,13 @@ LABEL MAINTAINER="Julio Conchas <conchasjimenez@gmail.com>"
 # Set working directory inside the container
 WORKDIR /app
 
+# install PostgreSQL client libraries needed by psycopg2
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*    
+    # clean up to keep image small
+
 # Install Poetry
 RUN pip install --no-cache-dir poetry
 
