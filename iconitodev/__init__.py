@@ -25,6 +25,7 @@ app.jinja_env.auto_reload = True
 #### DATABASE SETUP ####
 ########################
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config['TIGRIS_BASE_URL'] = os.getenv('BUCKET_NAME')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -50,3 +51,12 @@ app.register_blueprint(core)
 app.register_blueprint(admin)
 app.register_blueprint(users)
 app.register_blueprint(error_pages)
+
+##############
+# app config #
+##############
+@app.context_processor
+def inject_globals():
+    return {
+        'MEDIA_URL': app.config.get('TIGRIS_BASE_URL')
+    }
