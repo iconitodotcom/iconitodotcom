@@ -102,6 +102,10 @@ body {
   {
     height: 80vh;
   }
+  .container-min-height
+  {
+    min-height: 80vh;
+  }
   .card-style
   {
     width: 20rem;
