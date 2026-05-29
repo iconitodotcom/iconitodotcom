@@ -14,3 +14,20 @@ primary_region = 'gdl'     # Guadalajara region ✏️
   memory = '256mb'
   cpu_kind = 'shared'
   cpus = 1
+
+## Suggested by Claude when setting up domain 
+## incase there are problem reaching out the website,
+## you can uncomment this and deploy again to see if it works
+## -------------------------------------------------------
+# [[services]]
+#     internal_port = 8080  # or whatever port your app uses
+#     protocol = "tcp"
+
+#     [[services.ports]]
+#     handlers = ["http"]
+#     port = 80
+#     force_https = true   # 👈 auto-redirect HTTP → HTTPS
+
+#     [[services.ports]]
+#     handlers = ["tls", "http"]
+#     port = 443
