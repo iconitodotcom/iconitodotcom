@@ -1,0 +1,510 @@
+/* =====================
+   Color Palette
+   ===================== */
+:root {
+    --primary-green: #1B4332;
+    --dark-green: #2D5F3F;
+    --medium-green: #52B788;
+    --light-green: #D8F3DC;
+    --very-light-green: #E8F5E9;
+    --yellow: #FFD60A;
+    --orange: #FF9D3D;
+    --red: #E63946;
+    --dark-text: #1B1B1B;
+    --light-text: #666666;
+}
+
+/* =====================
+   Global Styles
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    color: var(--dark-text);
+    background-color: #f8f9fa;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* =====================
+   Exposure Index Bar
+   ===================== */
+.exposure-index-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bar-container {
+    display: flex;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.bar-segment {
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.labels-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--light-text);
+    text-align: center;
+}
+
+.label-text {
+    flex: 1;
+    padding: 0 5px;
+}
+
+/* =====================
+   Forms & Inputs
+   ===================== */
+.form-control, .form-control-lg {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-control-lg:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(27, 67, 50, 0.1);
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* =====================
+   Buttons
+   ===================== */
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* =====================
+   Cards & Containers
+   ===================== */
+.rounded-lg {
+    border-radius: 12px;
+    border: none;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+/* =====================
+   Typography
+   ===================== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.text-dark {
+    color: var(--dark-text);
+}
+
+.text-muted {
+    color: var(--light-text);
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* =====================
+   Title Underline
+   ===================== */
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--dark-green) 0%, var(--medium-green) 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* =====================
+   Icon Circle
+   ===================== */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--very-light-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    color: var(--primary-green);
+}
+
+.icon-small {
+    width: 16px;
+    height: 16px;
+    display: inline;
+    margin-right: 8px;
+}
+
+/* =====================
+   Range Slider
+   ===================== */
+.form-range {
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, var(--dark-green) 0%, var(--medium-green) 50%, var(--red) 100%);
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary-green);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.form-range::-webkit-slider-thumb:hover {
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.25);
+    transform: scale(1.1);
+}
+
+.form-range::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary-green);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.form-range::-moz-range-thumb:hover {
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.25);
+    transform: scale(1.1);
+}
+
+.form-range::-moz-range-track {
+    background: none;
+    border: none;
+}
+
+.slider-labels {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--light-text);
+}
+
+/* =====================
+   Dimension Card
+   ===================== */
+.dimension-card {
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.dimension-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.slider-container {
+    margin: 20px 0;
+}
+
+.exposure-value {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 16px;
+    border-radius: 8px;
+    display: inline-block;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.exposure-value.exposure-very-low {
+    color: var(--dark-green);
+    background-color: rgba(45, 95, 63, 0.1);
+}
+
+.exposure-value.exposure-low {
+    color: var(--medium-green);
+    background-color: rgba(82, 183, 136, 0.1);
+}
+
+.exposure-value.exposure-moderate {
+    color: #F59E0B;
+    background-color: rgba(255, 214, 10, 0.1);
+}
+
+.exposure-value.exposure-high {
+    color: var(--orange);
+    background-color: rgba(255, 157, 61, 0.1);
+}
+
+.exposure-value.exposure-very-high {
+    color: var(--red);
+    background-color: rgba(230, 57, 70, 0.1);
+}
+
+.value-number {
+    font-weight: 800;
+}
+
+/* =====================
+   Result Index Circle
+   ===================== */
+.exposure-index-result {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.index-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.index-circle.exposure-very-low {
+    background: linear-gradient(135deg, var(--dark-green) 0%, var(--medium-green) 100%);
+    color: white;
+}
+
+.index-circle.exposure-low {
+    background: linear-gradient(135deg, var(--medium-green) 0%, #80D4A0 100%);
+    color: white;
+}
+
+.index-circle.exposure-moderate {
+    background: linear-gradient(135deg, var(--yellow) 0%, #FFC857 100%);
+    color: #333;
+}
+
+.index-circle.exposure-high {
+    background: linear-gradient(135deg, var(--orange) 0%, #FFB84D 100%);
+    color: white;
+}
+
+.index-circle.exposure-very-high {
+    background: linear-gradient(135deg, var(--red) 0%, #FF6B7A 100%);
+    color: white;
+}
+
+.index-number {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.index-label {
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* =====================
+   Progress Bar
+   ===================== */
+.progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green) 0%, var(--medium-green) 100%);
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+/* =====================
+   Alerts
+   ===================== */
+.alert {
+    border: 1px solid #ddd;
+    border-left: 4px solid var(--primary-green);
+    border-radius: 6px;
+}
+
+.alert-info {
+    background-color: var(--very-light-green);
+    color: var(--primary-green);
+}
+
+/* =====================
+   Responsive Design
+   ===================== */
+@media (max-width: 768px) {
+    .form-control, .form-control-lg {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .index-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .index-number {
+        font-size: 56px;
+    }
+
+    .slider-container .row {
+        flex-direction: column;
+    }
+
+    .slider-container .col-md-2,
+    .slider-container .col-md-8 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .dimension-card {
+        padding: 20px !important;
+    }
+
+    .btn-primary {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .label-text {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .bg-white.rounded-lg.p-5 {
+        padding: 20px !important;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* =====================
+   Loading Modal
+   ===================== */
+.modal-content {
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.spinner-border-primary {
+    color: var(--primary-green) !important;
+}
+
+/* =====================
+   Print Styles
+   ===================== */
+@media print {
+    body {
+        background: white;
+    }
+
+    .btn-primary,
+    .progress-bar-container {
+        display: none;
+    }
+
+    .exposure-index-result {
+        page-break-after: avoid;
+    }
+}

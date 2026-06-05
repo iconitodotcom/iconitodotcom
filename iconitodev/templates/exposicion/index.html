@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Exposición - Pérdida de Valor Estructural</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/exposicion/style.css') }}">
+</head>
+<body class="bg-light">
+    <div class="container-fluid min-vh-100 d-flex align-items-center py-5">
+        <div class="container">
+            <!-- Exposure Index Bar -->
+            <div class="exposure-index-bar mb-5">
+                <div class="bar-container">
+                    <div class="bar-segment" style="width: 20%; background-color: #2D5F3F;"></div>
+                    <div class="bar-segment" style="width: 20%; background-color: #52B788;"></div>
+                    <div class="bar-segment" style="width: 20%; background-color: #FFD60A;"></div>
+                    <div class="bar-segment" style="width: 20%; background-color: #FF9D3D;"></div>
+                    <div class="bar-segment" style="width: 20%; background-color: #E63946;"></div>
+                </div>
+                <div class="labels-container">
+                    <span class="label-text">Muy Baja</span>
+                    <span class="label-text">Baja</span>
+                    <span class="label-text">Moderada</span>
+                    <span class="label-text">Alta</span>
+                    <span class="label-text">Muy Alta</span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Title Section -->
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bold text-dark mb-3" style="color: #1B4332;">Exposición Baja</h1>
+                        <div class="title-underline mb-4"></div>
+                        <h2 class="h4 fw-semibold text-dark mb-3">La pérdida de valor estructural no parece ser<br>un factor relevante en el desempeño actual del negocio.</h2>
+                        <p class="text-muted lead">Las condiciones observadas sugieren que el negocio presenta una baja exposición a problemas de pérdida de valor estructural.</p>
+                    </div>
+
+                    <!-- Description Section -->
+                    <div class="bg-white rounded-lg p-4 mb-4 shadow-sm">
+                        <p class="text-dark mb-3">
+                            <strong>En términos generales,</strong> esto indica que la pérdida de valor estructural difícilmente explica una parte relevante del desempeño actual del negocio.
+                        </p>
+                        <p class="text-dark">
+                            Las organizaciones no pierden valor de forma visible desde el inicio. Antes de que la pérdida de valor se manifieste en merma, quiebres, sobreinventario, descuentos o rentabilidad, suelen existir señales estructurales que pasan desapercibidas dentro de la operación.
+                        </p>
+                    </div>
+
+                    <!-- What's Next Section -->
+                    <div class="row mb-5">
+                        <div class="col-md-2 text-center mb-3">
+                            <div class="icon-circle">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h5 class="fw-bold text-dark mb-2">¿Qué sigue?</h5>
+                            <p class="text-dark mb-0">
+                                La exposición observada merece contexto. Conversaremos sobre el resultado obtenido para comprender mejor cómo se relaciona con la realidad actual del negocio y responder cualquier duda sobre su interpretación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Form Section -->
+                    <div class="bg-white rounded-lg p-5 shadow-sm">
+                        <form method="POST" action="{{ url_for('pocs.exposicion') }}" id="contactForm">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label fw-semibold text-dark">NOMBRE COMPLETO <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-semibold text-dark">CORREO ELECTRÓNICO <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="ejemplo@empresa.com" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="puesto" class="form-label fw-semibold text-dark">PUESTO <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control form-control-lg" id="puesto" name="puesto" placeholder="Escribe tu puesto" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="empresa" class="form-label fw-semibold text-dark">EMPRESA <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control form-control-lg" id="empresa" name="empresa" placeholder="Escribe el nombre de tu empresa" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-5">
+                                <div class="col-12">
+                                    <label for="telefono" class="form-label fw-semibold text-dark">TELÉFONO <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control form-control-lg" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">
+                                CONVERSAR SOBRE ESTE RESULTADO →
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Privacy Notice -->
+                    <div class="text-center mt-4">
+                        <small class="text-muted">
+                            <svg class="icon-small" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Tu privacidad es importante para nosotros. Los datos que proporcionas serán utilizados únicamente para contactarte y coordinar la conversación solicitada. No compartiremos tu información con terceros sin tu consentimiento. Puedes consultar nuestro Aviso de Privacidad <a href="#">aquí</a>.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

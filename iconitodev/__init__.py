@@ -4,6 +4,7 @@
 # na    Julio Conchas 03/16/2026 Add error_pages handlers blueprint
 # na    Julio Conchas 03/16/2026 Add database setup to supabase
 # na    Julio Conchas 03/19/2026 Adding users blueprint
+# na    Julio Conchas 06/05/2026 Adding pocs blueprint
 
 from flask import Flask 
 from flask_sqlalchemy import SQLAlchemy
@@ -45,12 +46,16 @@ login_manager.login_view = 'users.login'
 from iconitodev.core.view import core
 from iconitodev.admin.view import admin
 from iconitodev.users.views import users
+from iconitodev.pocs.view import pocs
 from iconitodev.error_pages.handlers import error_pages
 
 app.register_blueprint(core)
 app.register_blueprint(admin)
 app.register_blueprint(users)
+app.register_blueprint(pocs)
 app.register_blueprint(error_pages)
+
+
 
 ##############
 # app config #
